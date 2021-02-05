@@ -43,7 +43,7 @@
         button.addEventListener("click", function () {
             let city = document.getElementById("input-value").value;
             let cityName = document.getElementById("city").innerText = city;
-            fetch('http://api.openweathermap.org/data/2.5/weather?q='+city+'&units=metric&appid=f2974b8c87cc374c5dd3053b85199390')
+            fetch('https://api.openweathermap.org/data/2.5/weather?q='+city+'&units=metric&appid=f2974b8c87cc374c5dd3053b85199390')
 
                 .then((response) => response.json())
                 .then(data => {
