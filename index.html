@@ -43,7 +43,7 @@
         button.addEventListener("click", function () {
             let city = document.getElementById("input-value").value;
             let cityName = document.getElementById("city").innerText = city;
-            fetch('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric&appid=f2974b8c87cc374c5dd3053b85199390')
+            fetch('http://api.openweathermap.org/data/2.5/weather?q='+city+'&units=metric&appid=f2974b8c87cc374c5dd3053b85199390')
 
                 .then((response) => response.json())
                 .then(data => {
@@ -54,7 +54,6 @@
                     const finalTemp = document.getElementById("tempValue").innerText = tempValue;
                     const user = data.weather[0].main;
                     const icon = data.weather[0].icon;
-                    console.log(icon);
                     const finalCondition = document.getElementById("condition").innerText = user;
                     const imageTag= document.getElementById("image");
                     imageTag.setAttribute("src",`https://openweathermap.org/img/wn/`+icon+`.png`);
